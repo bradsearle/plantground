@@ -70,3 +70,13 @@ function naked_scripts()  {
   
 }
 add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
+
+
+
+
+// Change number of columns per row
+add_filter('loop_shop_columns', 'change_loop_columns', 999);
+add_filter('storefront_loop_columns', 'change_loop_columns', 999);
+function change_loop_columns() {
+    return 4;
+}
