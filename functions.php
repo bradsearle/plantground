@@ -1,3 +1,5 @@
+
+
 <?php
 	/*-----------------------------------------------------------------------------------*/
 	/* This file will be referenced every time a template/page loads on your Wordpress site
@@ -52,7 +54,6 @@ function naked_register_sidebars() {
 } 
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'naked_register_sidebars' );
-
 /*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts
 /*-----------------------------------------------------------------------------------*/
@@ -60,7 +61,9 @@ add_action( 'widgets_init', 'naked_register_sidebars' );
 function naked_scripts()  { 
 
 	// get the theme directory style.css and link to it in the header
-	wp_enqueue_style('/assets/css/styles.css', get_stylesheet_directory_uri() . '/assets/css/styles.css');
+	wp_enqueue_style('/assets/css/styles.css', get_stylesheet_directory_uri() . '/assets/css/styles.css', array(), rand(111,9999), 'all' );
+
+
 	
 	// add fitvid
 	wp_enqueue_script( 'naked-fitvid', get_template_directory_uri() . '/js/jquery.fitvids.js', array( 'jquery' ), NAKED_VERSION, true );
@@ -70,13 +73,3 @@ function naked_scripts()  {
   
 }
 add_action( 'wp_enqueue_scripts', 'naked_scripts' ); // Register this fxn and allow Wordpress to call it automatcally in the header
-
-
-
-
-// Change number of columns per row
-add_filter('loop_shop_columns', 'change_loop_columns', 999);
-add_filter('storefront_loop_columns', 'change_loop_columns', 999);
-function change_loop_columns() {
-    return 4;
-}

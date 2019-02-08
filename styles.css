@@ -14,24 +14,3 @@ License: GNU General Public License
 body {
   background-color: #fff;
 }
-
-.woocommerce ul.products li.product .button {
-  display: none;
-}
-.woocommerce ul.products li.product .woocommerce-loop-category__title,
-.woocommerce ul.products li.product .woocommerce-loop-product__title,
-.woocommerce ul.products li.product h3 {
-  padding: 0.5em 0;
-  margin: -45px 10px;
-  font-size: 1em;
-}
-
-.woocommerce ul.products li.product,
-.woocommerce-page ul.products li.product {
-  float: left;
-  margin: 0px;
-  padding: 0;
-  position: relative;
-  width: 22.05%;
-  margin-left: 0;
-}
