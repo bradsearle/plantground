@@ -11,21 +11,27 @@ License: GNU General Public License
 -------------------------------------------------------------- */
 /* Reset
 -------------------------------------------------------------- */
-body{
+body {
   background-color: #fff;
 }
 
+.woocommerce ul.products li.product .button {
+  display: none;
+}
+.woocommerce ul.products li.product .woocommerce-loop-category__title,
+.woocommerce ul.products li.product .woocommerce-loop-product__title,
+.woocommerce ul.products li.product h3 {
+  padding: 0.5em 0;
+  margin: -45px 10px;
+  font-size: 1em;
+}
 
-
-
-12345678910                    {% extends "_layout" %}
-{% set entrySlug = craft.app.request.segments|last %}
-{% set title = entry.title  %}
- 
-{% block content %}
-  {% for entry in craft.entries.section('storage').slug(entrySlug).status(null).limit(1).all() %} 
-    {% include "includes-global/preview-link" %}
-    {% include "storage/entry-types/" ~ entry.type %}
-  {% endfor %}
-{% endblock %}                
-$
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  float: left;
+  margin: 0px;
+  padding: 0;
+  position: relative;
+  width: 22.05%;
+  margin-left: 0;
+}
