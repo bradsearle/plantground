@@ -4,7 +4,7 @@
   "description": "Powerful shell for rapidly deploying your WordPress projects.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "sass": "mkdir -p ./assets/css && node-sass --output-style compressed -o ./assets/css ./src/sass"
   },
   "repository": {
     "type": "git",
