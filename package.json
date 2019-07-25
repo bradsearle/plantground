@@ -14,10 +14,14 @@
   "author": "Brad Searle",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/bradsearle/plantground/issues"
+    "url": "https://plantground.com"
   },
-  "homepage": "https://github.com/bradsearle/plantground#readme",
+  "homepage": "https://plantground.com",
   "dependencies": {
-    "node-sass": "^4.12.0"
+    "css-loader": "^3.1.0",
+    "http-server": "^0.11.1",
+    "node-sass": "^4.12.0",
+    "npm-sass": "^2.3.0",
+    "webpack": "^4.37.0"
   }
 }
