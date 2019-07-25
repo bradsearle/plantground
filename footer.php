@@ -1,25 +1,30 @@
-<?php
-	/*-----------------------------------------------------------------------------------*/
-	/* This template will be called by all other template files to finish 
-	/* rendering the page and display the footer area/content
-	/*-----------------------------------------------------------------------------------*/
-?>
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
 
-</main><!-- / end page container, begun in the header -->
+				<!-- copyright -->
+				<p class="copyright">
+					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
+					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
+				</p>
+				<!-- /copyright -->
 
-<footer class="site-footer">
-	<div class="site-info container">
-		
-		
-		
-	</div><!-- .site-info -->
-</footer><!-- #colophon .site-footer -->
+			</footer>
+			<!-- /footer -->
 
-<?php wp_footer(); 
-// This fxn allows plugins to insert themselves/scripts/css/files (right here) into the footer of your website. 
-// Removing this fxn call will disable all kinds of plugins. 
-// Move it if you like, but keep it around.
-?>
-this is the footer
-</body>
+		</div>
+		<!-- /wrapper -->
+
+		<?php wp_footer(); ?>
+
+		<!-- analytics -->
+		<script>
+		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){
+		(f[s].q=f[s].q||[]).push(arguments)},f[s].l=1*new Date();h=i.createElement(r),
+		l=i.getElementsByTagName(r)[0];h.async=1;h.src=e;l.parentNode.insertBefore(h,l)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+		ga('create', 'UA-XXXXXXXX-XX', 'yourdomain.com');
+		ga('send', 'pageview');
+		</script>
+
+	</body>
 </html>

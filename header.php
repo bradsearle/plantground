@@ -1,49 +1,49 @@
-<?php
-	/*-----------------------------------------------------------------------------------*/
-	/* This template will be called by all other template files to begin 
-	/* rendering the page and display the header/nav
-	/*-----------------------------------------------------------------------------------*/
-?>
-<!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-<meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title>
-	<?php bloginfo('name'); // show the blog name, from settings ?> | 
-	<?php is_front_page() ? bloginfo('description') : wp_title(''); // if we're on the home page, show the description, from the site's settings - otherwise, show the title of the post or page ?>
-</title>
+<!doctype html>
+<html <?php language_attributes(); ?> class="no-js">
+	<head>
+		<meta charset="<?php bloginfo('charset'); ?>">
+		<title><?php wp_title(''); ?><?php if(wp_title('', false)) { echo ' :'; } ?> <?php bloginfo('name'); ?></title>
 
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<?php // We are loading our theme directory style.css by queuing scripts in our functions.php file, 
-	// so if you want to load other stylesheets,
-	// I would load them with an @import call in your style.css
-?>
+		<link href="//www.google-analytics.com" rel="dns-prefetch">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/favicon.ico" rel="shortcut icon">
+        <link href="<?php echo get_template_directory_uri(); ?>/img/icons/touch.png" rel="apple-touch-icon-precomposed">
 
-<?php // Loads HTML5 JavaScript file to add support for HTML5 elements in older IE versions. ?>
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="<?php bloginfo('description'); ?>">
 
-<?php wp_head(); 
-// This fxn allows plugins, and Wordpress itself, to insert themselves/scripts/css/files
-// (right here) into the head of your website. 
-// Removing this fxn call will disable all kinds of plugins and Wordpress default insertions. 
-// Move it if you like, but I would keep it around.
-?>
+		<?php wp_head(); ?>
+		<script>
+        // conditionizr.com
+        // configure environment tests
+        conditionizr.config({
+            assets: '<?php echo get_template_directory_uri(); ?>',
+            tests: {}
+        });
+        </script>
 
-</head>
+	</head>
+	<body <?php body_class(); ?>>
 
-<body 
-	<?php body_class(); 
-	// This will display a class specific to whatever is being loaded by Wordpress
-	// i.e. on a home page, it will return [class="home"]
-	// on a single post, it will return [class="single postid-{ID}"]
-	// and the list goes on. Look it up if you want more.
-	?>
->
+		<!-- wrapper -->
+		<div class="wrapper">
 
-<div class="test">
-	<a href="https://www.plantground.com/my-account">my account</a>
-</div>
+			<!-- header -->
+			<header class="header clear" role="banner">
+
+					<!-- logo -->
+					<div class="logo">
+						<a href="<?php echo home_url(); ?>">
+							<!-- <img src="<?php echo get_template_directory_uri(); ?>/img/logo.svg" alt="Logo" class="logo-img"> -->
+						</a>
+					</div>
+					<!-- /logo -->
+
+					<!-- nav -->
+					<nav class="nav" role="navigation">
+						<?php html5blank_nav(); ?>
+					</nav>
+					<!-- /nav -->
+
+			</header>
+			<!-- /header -->
