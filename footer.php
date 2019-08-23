@@ -1,6 +1,6 @@
 			<!-- footer -->
 			<footer class="footer" role="contentinfo">
-
+testing...
 				<!-- copyright -->
 				<p class="copyright">
 					&copy; <?php echo date('Y'); ?> Copyright 
