@@ -2,4 +2,28 @@
 
 <?php the_content(); ?>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php /*
 <?php get_footer(); ?>
+*/
+?>
