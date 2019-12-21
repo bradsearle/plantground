@@ -1,23 +1,18 @@
-</div>
-		<!-- /wrapper -->	
-		
-		
-<style>
-.tes{
-	width: 100%;
-	background-color: #222;
-	color: #fff;
-	text-align: left;
-	
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
 
-}
-	</style>
+				<!-- copyright -->
+				<p class="copyright">
+					&copy; <?php echo date('Y'); ?> Copyright 
+				
+				</p>
+				<!-- /copyright -->
 
+			</footer>
+			<!-- /footer -->
 
-
-			<div class="tes">
-		<p>Copyright </p>
-</div>
+		</div>
+		<!-- /wrapper -->
 
 		<?php wp_footer(); ?>
 
