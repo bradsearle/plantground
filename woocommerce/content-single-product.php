@@ -16,7 +16,7 @@
  */
 
 defined( 'ABSPATH' ) || exit;
-echo 'test';
+
 global $product;
 
 /**
