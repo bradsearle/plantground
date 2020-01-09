@@ -1,9 +1,11 @@
 			<!-- footer -->
-			<footer class="footer" role="contentinfo">
+			<div class="footer__container">
+				<footer class="footer" role="contentinfo">
 
-				footer content goes here
+					footer content goes here
 
-			</footer>
+				</footer>
+			</div>
 			<!-- /footer -->
 
 			<!-- </div> -->

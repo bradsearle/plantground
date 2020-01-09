@@ -1,4 +1,5 @@
 @import 'index.scss';
+@import 'mixins.scss';
 
 $test: #fff;
 
@@ -6,6 +7,27 @@ body {
   background-color: $test;
   font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #000;
+}
+
+.footer__container {
+  @include container();
+}
+
+.header__container {
+  @include container();
+}
+
+.products__container {
+  @include container();
+}
+.product-single__container {
+  @include container();
+}
+
+.search__container {
+  @include container();
+  margin-top: 55px;
+  margin-bottom: 55px;
 }
 
 .welcome {
@@ -17,28 +39,21 @@ body {
   }
 }
 
-.nav {
-  background-color: #eee;
+@media (max-width: 525px) {
+  .woocommerce ul.products li.product,
+  .woocommerce-page ul.products {
+    width: 100% !important;
+    float: none !important;
+  }
 }
-
-
-.container{
-  max-width: 1090px;
-  margin: auto;
-  padding: 22px;
-}
-
-
-
-@media (max-width: 525px){
-	.woocommerce ul.products li.product, .woocommerce-page ul.products {
-		width: 100% !important;
-		float: none !important;
-	}
-}
-
-
 
 .related.products {
   display: none;
+}
+
+// overrides
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 4px 4px 4px 4px;
 }
