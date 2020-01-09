@@ -309,35 +309,37 @@ function html5blankcomments($comment, $args, $depth)
 		$add_below = 'div-comment';
 	}
 ?>
-    <!-- heads up: starting < for the html tag (li or div) in the next line: -->
-    <<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?> id="comment-<?php comment_ID() ?>">
-	<?php if ( 'div' != $args['style'] ) : ?>
-	<div id="div-comment-<?php comment_ID() ?>" class="comment-body">
-	<?php endif; ?>
-	<div class="comment-author vcard">
-	<?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
-	<?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
-	</div>
-<?php if ($comment->comment_approved == '0') : ?>
-	<em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
-	<br />
-<?php endif; ?>
+<!-- heads up: starting < for the html tag (li or div) in the next line: -->
+<<?php echo $tag ?> <?php comment_class(empty( $args['has_children'] ) ? '' : 'parent') ?>
+    id="comment-<?php comment_ID() ?>">
+    <?php if ( 'div' != $args['style'] ) : ?>
+    <div id="div-comment-<?php comment_ID() ?>" class="comment-body">
+        <?php endif; ?>
+        <div class="comment-author vcard">
+            <?php if ($args['avatar_size'] != 0) echo get_avatar( $comment, $args['180'] ); ?>
+            <?php printf(__('<cite class="fn">%s</cite> <span class="says">says:</span>'), get_comment_author_link()) ?>
+        </div>
+        <?php if ($comment->comment_approved == '0') : ?>
+        <em class="comment-awaiting-moderation"><?php _e('Your comment is awaiting moderation.') ?></em>
+        <br />
+        <?php endif; ?>
 
-	<div class="comment-meta commentmetadata"><a href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
-		<?php
+        <div class="comment-meta commentmetadata"><a
+                href="<?php echo htmlspecialchars( get_comment_link( $comment->comment_ID ) ) ?>">
+                <?php
 			printf( __('%1$s at %2$s'), get_comment_date(),  get_comment_time()) ?></a><?php edit_comment_link(__('(Edit)'),'  ','' );
 		?>
-	</div>
+        </div>
 
-	<?php comment_text() ?>
+        <?php comment_text() ?>
 
-	<div class="reply">
-	<?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
-	</div>
-	<?php if ( 'div' != $args['style'] ) : ?>
-	</div>
-	<?php endif; ?>
-<?php }
+        <div class="reply">
+            <?php comment_reply_link(array_merge( $args, array('add_below' => $add_below, 'depth' => $depth, 'max_depth' => $args['max_depth']))) ?>
+        </div>
+        <?php if ( 'div' != $args['style'] ) : ?>
+    </div>
+    <?php endif; ?>
+    <?php }
 
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
@@ -462,8 +464,49 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
 
+// Change number or products per row to 2
+add_filter('loop_shop_columns', 'loop_columns');
+if (!function_exists('loop_columns')) {
+	function loop_columns() {
+		return 3; // 2 products per row
+	}
+}
+
+
+
+
+
+
+/**
+ * @snippet       Adds notice at single product page above add to cart
+ * @how-to        Get CustomizeWoo.com FREE
+ * @sourcecode    https://businessbloomer.com/?p=349
+ * @author        Rodolfo Melogli
+ * @testedwith    WooCommerce 3.4.5
+ * 
+ * 
+ * 
+ * add_action( 'woocommerce_single_product_summary', 'bbloomer_show_return_policy', 20 );
+ 
+*function bbloomer_show_return_policy() {
+    *echo '<p class="rtrn">30-day return policy offered. See Terms and Conditions for details.</p>';
+*}
+
+ * 
+ */
+ 
+add_action( 'woocommerce_single_product_summary', 'brad' );
+ 
+function brad() {
+ 
+    if ( has_term( 'bare-root', 'product_tag' ) ) {
+        echo 'bare';
+        } elseif ( has_term( 'none', 'product_tag' ) ) {
+        echo 'not bare ';
+        }
+         
+        }
+ 
+
+
 ?>
-
-
-
-
