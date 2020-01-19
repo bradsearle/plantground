@@ -13,6 +13,7 @@
 
 <!-- <div class="welcome">
   <img class="welcome__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-daisey.jpg" />
+  <?php echo get_template_directory_uri(); ?>
 </div> -->
 
 

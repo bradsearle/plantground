@@ -1,6 +1,10 @@
 @import 'index.scss';
 @import 'mixins.scss';
 
+
+
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+
 $test: #fff;
 
 body {
@@ -28,6 +32,10 @@ body {
   @include container();
   margin-top: 55px;
   margin-bottom: 55px;
+}
+
+.logo{
+  font-size: 32px;
 }
 
 .welcome {
