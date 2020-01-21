@@ -1,6 +1,38 @@
 @import 'index.scss';
-@import 'mixins.scss';
 
+@charset 'UTF-8';
+
+// 1. Configuration and helpers
+@import
+  'abstracts/variables',
+  'abstracts/mixins';
+
+// 2. Vendors
+@import
+  'vendors/normalize';
+
+// 3. Base stuff
+@import
+  'base/fonts',
+  'base/typography',
+  'base/helpers';
+
+// 4. Layout-related sections
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button';
+
+// 6. Page-specific styles
+@import
+  'pages/home';
+
+// 7. Themes
+@import
+  'themes/default';
 
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
@@ -34,9 +66,6 @@ body {
   margin-bottom: 55px;
 }
 
-.logo{
-  font-size: 32px;
-}
 
 .welcome {
   width: 100%;
