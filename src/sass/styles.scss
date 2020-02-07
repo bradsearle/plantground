@@ -3,37 +3,25 @@
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import
-  'abstracts/variables',
-  'abstracts/mixins';
+@import 'abstracts/variables', 'abstracts/mixins';
 
 // 2. Vendors
-@import
-  'vendors/normalize';
+@import 'vendors/normalize';
 
 // 3. Base stuff
-@import
-  'base/fonts',
-  'base/typography',
-  'base/helpers';
+@import 'base/fonts', 'base/typography', 'base/helpers';
 
 // 4. Layout-related sections
-@import
-  'layout/header',
-  'layout/footer';
+@import 'layout/header', 'layout/footer';
 
 // 5. Components
-@import
-  'components/button';
+@import 'components/button';
 
 // 6. Page-specific styles
-@import
-  'pages/home';
+@import 'pages/home';
 
 // 7. Themes
-@import
-  'themes/default';
-
+@import 'themes/default';
 
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
@@ -66,7 +54,6 @@ body {
   margin-bottom: 55px;
 }
 
-
 .welcome {
   width: 100%;
   height: 300px;
@@ -97,4 +84,13 @@ body {
 
 .single-product .product_meta {
   display: none;
+}
+
+.woocommerce.columns-3 ul.products li.product {
+  width: 32.8%;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 1px 1px 1px 1px;
 }
