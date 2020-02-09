@@ -43,6 +43,7 @@ body {
 
 .products__container {
   @include container();
+  background-color: pink;
 }
 .product-single__container {
   @include container();
@@ -93,4 +94,9 @@ body {
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
   margin: 1px 1px 1px 1px;
+}
+
+
+.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+  width: 24.8%;
 }

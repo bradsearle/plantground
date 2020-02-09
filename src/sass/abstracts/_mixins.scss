@@ -4,14 +4,15 @@
 
 @mixin container($top: 0, $bottom: 0) {
   max-width: 1152px;
-  padding: 0 16px;
   width: 100%;
   position: relative;
   margin: $top auto $bottom auto;
   box-sizing: border-box;
+   padding: 0 15px;
+
 
   @media (min-width: 576px) {
-    max-width: 576px;
+    max-width: 100%;
   }
 
   @media (min-width: 768px) {
@@ -19,11 +20,11 @@
   }
 
   @media (min-width: 990px) {
-    max-width: 990px;
+    max-width: 100%;
   }
 
-  @media (min-width: 1200px) {
-    max-width: 1200px;
+  @media (min-width: 1280px) {
+    max-width: 1280px;
   }
 
   @media (min-width: 1600px) {
