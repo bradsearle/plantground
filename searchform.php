@@ -6,7 +6,9 @@
 
 
 <p>
-	<a class="toggle" href="#example">search</a>
+	<a class="toggle" href="#example"><i class="material-icons">
+search
+</i></a>
 </p>
 
 <div class="test" id="example">
