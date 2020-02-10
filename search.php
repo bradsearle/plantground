@@ -1,5 +1,9 @@
 <?php get_header(); ?>
 
+<?php include get_theme_file_path( 'head.php' );?>
+<?php include get_theme_file_path( 'includes/search-nav.php' );?>
+
+
 	<main role="main">
 		<!-- section -->
 		<section>
