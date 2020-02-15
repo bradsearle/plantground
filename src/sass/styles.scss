@@ -98,5 +98,14 @@ body {
 
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  width: 24.8%;
+  width: 24.7%;
+}
+
+@media only (max-width: 768px) {
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 49.9%;
+    float: left;
+    clear: both;
+    margin: 0 0 2.992em;
+}
 }
