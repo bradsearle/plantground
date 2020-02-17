@@ -49,11 +49,17 @@ body {
   @include container();
 }
 
+.product-single__bg {
+ background-color: #ebedee;
+}
+
 .search__container {
   @include container();
   margin-top: 55px;
   margin-bottom: 55px;
 }
+
+
 
 .welcome {
   width: 100%;
@@ -108,4 +114,10 @@ body {
     clear: both;
     margin: 0 0 2.992em;
 }
+}
+
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs {
+  // clear: none;
+  // background-color: #ccc;
+  margin-top: 100px;
 }

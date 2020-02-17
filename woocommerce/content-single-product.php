@@ -31,7 +31,12 @@ if ( post_password_required() ) {
 	return;
 }
 ?>
+
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
+
+
+
+
 
 	<?php
 	/**
@@ -74,4 +79,9 @@ if ( post_password_required() ) {
 	?>
 </div>
 
+
+
 <?php do_action( 'woocommerce_after_single_product' ); ?>
+
+
+huihiuhiuh

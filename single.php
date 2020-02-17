@@ -3,7 +3,7 @@
 
 <?php include get_theme_file_path( 'includes/search-nav.php' );?>
 
-
+<div class="product-single__bg">
 <div class="product-single__container">
 
 	<main role="main">
@@ -52,6 +52,7 @@
 	</main>
 
 </div>
+			</div>
 
 
 
