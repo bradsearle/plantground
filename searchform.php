@@ -5,11 +5,10 @@
 </style>
 
 
-<p>
-	<a class="toggle" href="#example"><i class="material-icons">
-search
-</i></a>
-</p>
+
+
+	<a class="toggle material-icons" href="#example">search</a>
+
 
 <div class="test" id="example">
 	<form class="search" method="get" action="<?php echo home_url(); ?>" role="search">
@@ -20,3 +19,4 @@ search
 	<a class="toggle" href="#example">X</a>
 
 </div>
+
