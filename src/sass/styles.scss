@@ -43,7 +43,6 @@ body {
 
 .products__container {
   @include container();
-  background-color: pink;
 }
 .product-single__container {
   @include container();
