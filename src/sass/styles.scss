@@ -63,11 +63,17 @@ height: 200px;
   @include container();
 }
 
+.product-single__bg {
+ background-color: #ebedee;
+}
+
 .search__container {
   @include container();
   margin-top: 55px;
   margin-bottom: 55px;
 }
+
+
 
 .welcome {
   width: 100%;
@@ -117,6 +123,7 @@ height: 200px;
 
 
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
+<<<<<<< HEAD
   width: 24.8%;
 }
 
@@ -136,3 +143,22 @@ height: 200px;
     padding-right: calc(.75em - 1px);
     padding-top: calc(.5em - 1px);
  }
+=======
+  width: 24.7%;
+}
+
+@media only (max-width: 768px) {
+.woocommerce ul.products[class*=columns-] li.product, .woocommerce-page ul.products[class*=columns-] li.product {
+    width: 49.9%;
+    float: left;
+    clear: both;
+    margin: 0 0 2.992em;
+}
+}
+
+.woocommerce #content div.product .woocommerce-tabs, .woocommerce div.product .woocommerce-tabs, .woocommerce-page #content div.product .woocommerce-tabs, .woocommerce-page div.product .woocommerce-tabs {
+  // clear: none;
+  // background-color: #ccc;
+  margin-top: 100px;
+}
+>>>>>>> 1bc85c19269aa1a64c117d345789da402b776c36

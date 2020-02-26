@@ -3,8 +3,8 @@
 <?php include get_theme_file_path( 'head.php' );?>
 <?php include get_theme_file_path( 'includes/search-nav.php' );?>
 
+<div class="products__container">
 
-	<main role="main">
 		<!-- section -->
 		<section>
 
@@ -16,8 +16,8 @@
 
 		</section>
 		<!-- /section -->
-	</main>
+	
+</div>
 
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

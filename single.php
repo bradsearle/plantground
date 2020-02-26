@@ -2,7 +2,13 @@
 <?php include get_theme_file_path( 'head.php' );?>
 <?php include get_theme_file_path( 'includes/search-nav.php' );?>
 
+<<<<<<< HEAD
 <div class="container">
+=======
+<div class="product-single__bg">
+<div class="product-single__container">
+
+>>>>>>> 1bc85c19269aa1a64c117d345789da402b776c36
 	<main role="main">
 		<section>
 			<?php if (have_posts()): while (have_posts()) : the_post(); ?>
@@ -27,6 +33,7 @@
 	</main>
 
 </div>
+			</div>
 
 
 
