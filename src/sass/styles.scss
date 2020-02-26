@@ -1,4 +1,6 @@
 @import 'index.scss';
+@import '../../node_modules/bulma/sass/utilities/_all.sass';
+@import '../../node_modules/bulma/sass/form/_all.sass';
 
 @charset 'UTF-8';
 
@@ -41,9 +43,21 @@ body {
   @include container();
 }
 
+.container {
+  @include container();
+}
+.container-fluid {
+  width: 100%;
+  clear: both;
+}
+
+.bg-grey{
+background-color: #efefef;
+height: 200px;
+}
+
 .products__container {
   @include container();
-  background-color: pink;
 }
 .product-single__container {
   @include container();
@@ -76,6 +90,11 @@ body {
   display: none;
 }
 
+.logo{
+  font-size: 14px;
+}
+
+
 // overrides
 
 .woocommerce ul.products li.product,
@@ -100,3 +119,20 @@ body {
 .woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
   width: 24.8%;
 }
+
+
+
+
+
+ .input-text { 
+  border-radius: 2px; 
+  background-color: #fff;
+  border:1px solid #cccccc ;
+  height: 3.5em;
+  line-height: 1.5;
+  font-size: 1em;
+  padding-bottom: calc(.5em - 1px);
+    padding-left: calc(.75em - 1px);
+    padding-right: calc(.75em - 1px);
+    padding-top: calc(.5em - 1px);
+ }

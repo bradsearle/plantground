@@ -1,7 +1,13 @@
 <?php get_header(); ?>
-dwdwd
+<?php include get_theme_file_path( 'head.php' );?>
+<?php include get_theme_file_path( 'includes/search-nav.php' );?>
+
+
+
+<div class="container">
+
 <main role="main">
-	<!-- section -->
+	
 	<section>
 
 		<h1><?php the_title(); ?></h1>
@@ -15,31 +21,20 @@ dwdwd
 
 			<?php comments_template( '', true ); // Remove if you don't want comments ?>
 
-			<br class="clear">
-
-			<?php edit_post_link(); ?>
+			
 
 		</article>
-		<!-- /article -->
 
 		<?php endwhile; ?>
 
 		<?php else: ?>
 
-		<!-- article -->
 		<article>
-
 			<h2><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h2>
-
 		</article>
-		<!-- /article -->
-
 		<?php endif; ?>
-
 	</section>
-	<!-- /section -->
 </main>
-
-<?php get_sidebar(); ?>
+		</div>
 
 <?php get_footer(); ?>

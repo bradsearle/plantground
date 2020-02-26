@@ -1,19 +1,19 @@
-			<!-- footer -->
-			<div class="footer__container">
+		
+			<div class="container-fluid bg-grey">
+			<div class="container">
 				<footer class="footer" role="contentinfo">
-
-					footer content goes here
-
+					footer //
 				</footer>
 			</div>
-			<!-- /footer -->
-
-			<!-- </div> -->
-			<!-- /wrapper -->
+		</div>
+		
 
 			<?php wp_footer(); ?>
 
-			<!-- analytics -->
+
+
+
+
 			<script>
 				(function (f, i, r, e, s, h, l) {
 					i['GoogleAnalyticsObject'] = s;
