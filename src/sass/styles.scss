@@ -52,8 +52,11 @@ body {
 }
 
 .bg-grey{
-background-color: #efefef;
+background-color: #eeeeff;
 height: 200px;
+}
+.bas{
+  background-color: #eee;
 }
 
 .products__container {
@@ -102,6 +105,10 @@ height: 200px;
 
 
 // overrides
+
+.product_type_simple {
+  display: none!important;
+}
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
