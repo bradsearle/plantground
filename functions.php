@@ -525,4 +525,7 @@ function woo_rename_tabs( $tabs ) {
 
 }
 
+
+
+
 ?>
