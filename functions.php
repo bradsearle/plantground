@@ -468,7 +468,7 @@ remove_action( 'admin_print_styles', 'print_emoji_styles' );
 add_filter('loop_shop_columns', 'loop_columns');
 if (!function_exists('loop_columns')) {
 	function loop_columns() {
-		return 3; // 2 products per row
+		return 4; // 2 products per row
 	}
 }
 
@@ -508,7 +508,11 @@ function brad() {
         }
 
 
-
+        add_theme_support( 'woocommerce', array(
+            'thumbnail_image_width' => 460,
+            'gallery_thumbnail_image_width' => 100,
+            'single_image_width' => 500,
+            ) );
 
 
 /**
@@ -526,6 +530,10 @@ function woo_rename_tabs( $tabs ) {
 }
 
 
+function remove_image_zoom_support() {
+    remove_theme_support( 'wc-product-gallery-zoom' );
+    }
+    add_action( 'wp', 'remove_image_zoom_support', 100 );
 
 
 ?>

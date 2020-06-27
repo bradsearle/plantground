@@ -1,37 +1,37 @@
-@import 'index.scss';
-@import '../../node_modules/bulma/sass/utilities/_all.sass';
-@import '../../node_modules/bulma/sass/form/_all.sass';
+@import "index.scss";
+@import "../../node_modules/bulma/sass/utilities/_all.sass";
+@import "../../node_modules/bulma/sass/form/_all.sass";
 
 @charset 'UTF-8';
 
 // 1. Configuration and helpers
-@import 'abstracts/variables', 'abstracts/mixins';
+@import "abstracts/variables", "abstracts/mixins";
 
 // 2. Vendors
-@import 'vendors/normalize';
+@import "vendors/normalize";
 
 // 3. Base stuff
-@import 'base/fonts', 'base/typography', 'base/helpers';
+@import "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import 'layout/header', 'layout/footer';
+@import "layout/header", "layout/footer";
 
 // 5. Components
-@import 'components/button';
+@import "components/button";
 
 // 6. Page-specific styles
-@import 'pages/home';
+@import "pages/home";
 
 // 7. Themes
-@import 'themes/default';
+@import "themes/default";
 
-@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 $test: #fff;
 
 body {
   background-color: $test;
-  font: 300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font: 300 11px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #000;
 }
 
@@ -51,16 +51,16 @@ body {
   clear: both;
 }
 
-.bg-grey{
-// background-color: #eeeeff;
-height: 200px;
+.bg-grey {
+  // background-color: #eeeeff;
+  height: 200px;
 }
-.bas{
+.bas {
   background-color: #eee;
 }
-.main-menu{
-display: inline-block;
-list-style: none;
+.main-menu {
+  display: inline-block;
+  list-style: none;
 }
 
 .products__container {
@@ -71,7 +71,7 @@ list-style: none;
 }
 
 .product-single__bg {
-//  background-color: #ebedee;
+  //  background-color: #ebedee;
 }
 
 .search__container {
@@ -81,8 +81,7 @@ list-style: none;
 }
 
 .material-icons {
-
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .welcome {
@@ -94,35 +93,33 @@ list-style: none;
   }
 }
 
-@media (max-width: 525px) {
-  .woocommerce ul.products li.product,
-  .woocommerce-page ul.products {
-    width: 100% !important;
-    float: none !important;
-  }
-}
+// @media (max-width: 525px) {
+//   .woocommerce ul.products li.product,
+//   .woocommerce-page ul.products {
+//     width: 100% !important;
+//     float: none !important;
+//   }
+// }
 
 .related.products {
   display: none;
 }
 
-.logo{
+.logo {
   font-size: 15px;
   padding: 8px;
   width: 100px;
-color:#fff;
-margin-top: 10px;;
-& a{
-  color:#222
-
+  color: #fff;
+  margin-top: 10px;
+  & a {
+    color: #222;
+  }
 }
-}
-
 
 // overrides
 
 .product_type_simple {
-  display: none!important;
+  display: none !important;
 }
 
 .woocommerce ul.products li.product,
@@ -134,55 +131,34 @@ margin-top: 10px;;
   display: none;
 }
 
-.woocommerce.columns-3 ul.products li.product {
-  width: 32.8%;
-}
-
-.woocommerce ul.products li.product,
-.woocommerce-page ul.products li.product {
-  margin: 1px 1px 1px 1px;
-}
-
-
-.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {
-  width: 24.8%;
-}
-
-
-
-
-
- .input-text { 
-  border-radius: 2px; 
+.input-text {
+  border-radius: 2px;
   background-color: #fff;
-  border:1px solid #cccccc ;
+  border: 1px solid #cccccc;
   height: 3.5em;
   line-height: 1.5;
   font-size: 1em;
-  padding-bottom: calc(.5em - 1px);
-    padding-left: calc(.75em - 1px);
-    padding-right: calc(.75em - 1px);
-    padding-top: calc(.5em - 1px);
- }
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: calc(0.75em - 1px);
+  padding-right: calc(0.75em - 1px);
+  padding-top: calc(0.5em - 1px);
+}
 
-
- @media(min-width: 776px) {
+@media (min-width: 776px) {
   .woocommerce-cart .woocommerce {
     display: flex;
   }
   .woocommerce-cart .woocommerce-cart-form {
     flex: 60%;
     margin-right: 30px;
-  }    
+  }
   .woocommerce-cart .cart-collaterals {
     flex: 40%;
-
   }
 }
-.woocommerce .cart-collaterals .cart_totals, .woocommerce-page .cart-collaterals .cart_totals {
-
+.woocommerce .cart-collaterals .cart_totals,
+.woocommerce-page .cart-collaterals .cart_totals {
   width: 100%;
-
 }
 .button[name="apply_coupon"] {
   background-color: transparent;
@@ -206,23 +182,63 @@ margin-top: 10px;;
   filter: brightness(115%);
 }
 
-
-
 .woocommerce ul.products li.product a img {
   width: 100%;
   height: auto;
   display: block;
   margin: 0 0 1em;
   box-shadow: none;
-  background-color: #EBEFF1;
+  background-color: #ebeff1;
 }
-
 
 .woocommerce div.product div.images img {
   display: block;
   width: 100%;
   height: auto;
   box-shadow: none;
-  background-color: #EBEFF1;
+  background-color: #ebeff1;
+}
+
+.woocommerce.columns-4 ul.products li.product {
+  width: 32.8%;
+}
+
+.woocommerce ul.products li.product,
+.woocommerce-page ul.products li.product {
+  margin: 1px 1px 1px 1px;
+}
+
+
+
+@media screen and (min-width: 1600px) {
+  .woocommerce ul.products.columns-4 li.product,
+  .woocommerce-page ul.products.columns-4 li.product {
+    width: 24.8%; 
+  }
+}
+
+@media screen and (min-width: 990px) {
+  .woocommerce ul.products.columns-4 li.product,
+  .woocommerce-page ul.products.columns-4 li.product {
+    width: 24.7%;
+  }
+
 
 }
+
+@media screen and (max-width: 768px) {
+  .woocommerce ul.products.columns-4 li.product,
+  .woocommerce-page ul.products.columns-4 li.product {
+    width: 49.9%; 
+  }
+
+}
+
+ @media screen and (max-width: 374px) {
+  .woocommerce ul.products.columns-4 li.product,
+  .woocommerce-page ul.products.columns-4 li.product {
+    width: 100%; 
+  }
+
+}
+
