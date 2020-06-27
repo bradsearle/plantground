@@ -7,22 +7,26 @@
 <?php include get_theme_file_path( 'includes/search-nav.php' );?>
 
 
-
-<!-- <div class="welcome">
-  <img class="welcome__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-daisey.jpg" />
-  <?php echo get_template_directory_uri(); ?>
-  
-  (template img)
-  
-</div> -->
 <br><br><br><br><br><br><br>
 
 
 <div class="container">
-hi brad
+
+<div class="hp-welcome">
+
+<!-- <img class="img-responsive" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bishop-cactus.png" /> -->
+
 </div>
 
 
+
+</div>
+
+
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
 <br><br><br><br><br><br><br>
