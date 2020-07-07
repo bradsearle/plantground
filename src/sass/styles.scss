@@ -248,30 +248,37 @@ margin-top: 1px;
   display: block;
   margin: 20px auto 20px auto;
 }
-
-@media screen and (min-width: 1600px) {
+@media (min-width: 1601px) {
   .woocommerce ul.products.columns-4 li.product,
   .woocommerce-page ul.products.columns-4 li.product {
-    width: 33.2%;
+    width: 24.8%;
     
   }
 }
 
-@media screen and (min-width: 990px) {
+@media (max-width: 1600px) {
   .woocommerce ul.products.columns-4 li.product,
   .woocommerce-page ul.products.columns-4 li.product {
-    width: 33.1%;
+    width: 33%;
+    
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 990px) {
+  .woocommerce ul.products.columns-4 li.product,
+  .woocommerce-page ul.products.columns-4 li.product {
+    width: 33%;
+  }
+}
+
+@media (max-width: 768px) {
   .woocommerce ul.products.columns-4 li.product,
   .woocommerce-page ul.products.columns-4 li.product {
     width: 49.8%;
   }
 }
 
-@media screen and (max-width: 374px) {
+@media  (max-width: 374px) {
   .woocommerce ul.products.columns-4 li.product,
   .woocommerce-page ul.products.columns-4 li.product {
     width: 100%;
