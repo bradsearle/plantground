@@ -25,5 +25,27 @@ function sf_child_theme_dequeue_style() {
 
 
 
+// Load HTML5 Blank styles
+function html5blank_styles()
+{
+    wp_register_style('html5blank', get_template_directory_uri() . 'assets/css/styles.css', array(), '1.0', 'all');
+    wp_enqueue_style('html5blank'); // Enqueue it!
+}
 
-wp_enqueue_style( 'custom-style’, get_template_directory_uri() . ‘/assets/css/styles.css' ); //our stylesheet
+
+/* Enqueues the child theme - Required for the child theme */
+// add_action( 'wp_enqueue_scripts', 'tutsplus_parent_styles');
+// function tutsplus_parent_styles() {
+      
+//     wp_enqueue_style( 'parent-style', get_template_directory_uri().'/style.css' );
+          
+// }
+ 
+/* Enqueues the external CSS file */
+add_action( 'wp_enqueue_scripts', 'tutsplus_external_styles' );
+function tutsplus_external_styles() {
+ 
+    wp_register_style( 'widget-css', get_stylesheet_directory_uri().'/assets/css/styles.css' );
+    wp_enqueue_style( 'widget-css' );
+ 
+}
