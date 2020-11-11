@@ -10,7 +10,11 @@
 
 <?php get_header(); ?>
 
-
+<style>
+#masthead{
+  display: none;
+}
+</style>
 
 
 

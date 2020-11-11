@@ -25,12 +25,6 @@ function sf_child_theme_dequeue_style() {
 
 
 
-// Load HTML5 Blank styles
-function html5blank_styles()
-{
-    wp_register_style('html5blank', get_template_directory_uri() . 'assets/css/styles.css', array(), '1.0', 'all');
-    wp_enqueue_style('html5blank'); // Enqueue it!
-}
 
 
 /* Enqueues the child theme - Required for the child theme */
@@ -49,3 +43,23 @@ function tutsplus_external_styles() {
     wp_enqueue_style( 'widget-css' );
  
 }
+
+
+if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
+	/**
+	 * The primary navigation wrapper
+	 */
+	function storefront_primary_navigation_wrapper() {
+		echo '<div class=""><div class="">';
+	}
+}
+
+
+function remove_default_hooks() {
+
+    remove_action( 'storefront_header', 'storefront_header_container',                   0 );
+    remove_action( 'storefront_header', 'storefront_header_container_close',                   0 );
+    
+    }
+    
+    add_action( 'init', 'remove_default_hooks' );
