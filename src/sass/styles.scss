@@ -1,4 +1,4 @@
-@import "index.scss";
+// @import "index.scss";
 @import "../sass/pages/home.scss";
 @import "../../node_modules/bulma/sass/utilities/_all.sass";
 @import "../../node_modules/bulma/sass/form/_all.sass";
@@ -111,19 +111,17 @@ body {
 .woocommerce ul.products li.product .woocommerce-loop-category__title, .woocommerce ul.products li.product .woocommerce-loop-product__title, .woocommerce ul.products li.product h3 {
   background-color: #fff;
   padding: 8px;
-  width: fit-content;
   font-size: 1em;
+  margin: 0px;
 }
 
 .woocommerce ul.products li.product .price {
-  color: #fff;
   display: block;
   font-weight: 400;
   padding: 8px;
-  background-color: #21d279;
-  width: fit-content;
 font-size: 11px;
-margin-top: 1px;
+margin: 0px;
+background-color: #fff;
 }
 
 
@@ -223,7 +221,6 @@ margin-top: 1px;
 .woocommerce ul.products.columns-4 li.product,
 .woocommerce-page ul.products.columns-4 li.product {
   background-color: #ebeff1;
-  padding: 20px 0px;
 }
 
 .woocommerce ul.products li.product a img {
