@@ -50,7 +50,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<div class=""><div class="">';
+		echo '<div id="delete"><div class="">';
 	}
 }
 

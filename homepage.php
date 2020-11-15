@@ -11,7 +11,10 @@
 <?php get_header(); ?>
 
 <style>
-#masthead{
+#delete{
+  display: none;
+}
+#delete2{
   display: none;
 }
 </style>
