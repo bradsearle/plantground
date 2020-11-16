@@ -50,7 +50,7 @@ if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<div id="delete"><div class="">';
+		echo '<div id="deletea"><div class="ht">';
 	}
 }
 
@@ -72,4 +72,69 @@ function remove_default_hooks() {
 add_action( 'init', 'woo_remove_wc_breadcrumbs' );
 function woo_remove_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );
+}
+
+if ( ! function_exists( 'storefront_header_cart' ) ) {
+	/**
+	 * Display Header Cart
+	 *
+	 * @since  1.0.0
+	 * @uses  storefront_is_woocommerce_activated() check if WooCommerce is activated
+	 * @return void
+	 */
+	function storefront_header_cart() {
+		if ( storefront_is_woocommerce_activated() ) {
+			if ( is_cart() ) {
+				$class = 'current-menu-item';
+			} else {
+				$class = '';
+			}
+			?>
+		
+			<?php
+		}
+	}
+}
+
+
+
+
+if ( ! function_exists( 'storefront_primary_navigation' ) ) {
+	/**
+	 * Display Primary Navigation
+	 *
+	 * @since  1.0.0
+	 * @return void
+	 */
+	function storefront_primary_navigation() {
+		?>
+		<ul id="site-header-cartd" class="site-header-cart menu">
+			<li class="<?php echo esc_attr( $class ); ?>">
+				<?php storefront_cart_link(); ?>
+			</li>
+			<li>
+				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
+			</li>
+		</ul>
+		<nav id="site-navigationfefwf" class="main-navigation" role="navigation" aria-label="<?php esc_html_e( 'Primary Navigation', 'storefront' ); ?>">
+		<button class="menu-toggle" aria-controls="site-navigation" aria-expanded="false"><span><?php echo esc_attr( apply_filters( 'storefront_menu_toggle_text', __( 'Menu', 'storefront' ) ) ); ?></span></button>
+			<?php
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'primary',
+					'container_class' => 'primary-navigation',
+				)
+			);
+
+			wp_nav_menu(
+				array(
+					'theme_location'  => 'handheld',
+					'container_class' => 'handheld-navigation',
+				)
+			);
+			?>
+		</nav><!-- #site-navigation -->
+		
+		<?php
+	}
 }

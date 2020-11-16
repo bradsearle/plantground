@@ -1,0 +1,11 @@
+.homegrown{
+    border-bottom: 1px solid #000;
+    height: 60vh;
+    &__background{
+        background-image: url("/wp-content/uploads/homepage/cactus1.png");
+        background-repeat:no-repeat; 
+        background-size: 800px 800px;
+        height: 100%;
+        background-position: 420px 76px;
+    }
+}

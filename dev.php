@@ -12,20 +12,30 @@
     height:100vh;
 
     }
-}
+.deletea2{
+    display:none;
+    }
     </style>
 
 <?php /* Template Name: Homepage development */ get_header(); ?>
 
-<!-- <div class="welcome">
-<img class="welcome__img" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/hero-daisey.jpg"/>
-</div> -->
 
 <div class="hp-view__wrap">
+<div class="container">
+
+<div class="homegrown">
+<div class="homegrown__background">
 
 </div>
 
-<?php include get_theme_file_path( 'main-navigation.php' );?>
+
+</div>
+
+</div>
+
+</div>
+
+
 
 
 <div class="container">
