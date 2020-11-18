@@ -37,8 +37,10 @@
   <?php endif; ?>
 
 <div class="hp-img">
-  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/bishop-cactus.png" />
-  in development
+  <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cactus-one.png" />
+ 
+ 
+
 </div>
 
 </section>
