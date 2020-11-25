@@ -14,9 +14,18 @@
 /**
  * Dequeue the Storefront Parent theme core CSS
  */
+
+
+ 
 function sf_child_theme_dequeue_style() {
     wp_dequeue_style( 'storefront-style' );
     wp_dequeue_style( 'storefront-woocommerce-style' );
+}
+
+add_action( 'init', 'storefront_remove_storefront_breadcrumbs' );
+
+function storefront_remove_storefront_breadcrumbs() {
+   remove_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
 }
 
 /**
@@ -36,13 +45,15 @@ function sf_child_theme_dequeue_style() {
 // }
  
 /* Enqueues the external CSS file */
-add_action( 'wp_enqueue_scripts', 'tutsplus_external_styles' );
-function tutsplus_external_styles() {
+add_action( 'wp_enqueue_scripts', 'pg' );
+function pg() {
  
-    wp_register_style( 'widget-css', get_stylesheet_directory_uri().'/assets/css/styles.css' );
-    wp_enqueue_style( 'widget-css' );
+    wp_register_style( 'pg-css', get_stylesheet_directory_uri().'/assets/css/styles.css' );
+    wp_enqueue_style( 'pg-css' );
  
 }
+
+
 
 
 if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
@@ -69,6 +80,8 @@ function remove_default_hooks() {
     /**
  * Remove the breadcrumbs 
  */
+
+ 
 add_action( 'init', 'woo_remove_wc_breadcrumbs' );
 function woo_remove_wc_breadcrumbs() {
     remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0 );

@@ -1,11 +1,33 @@
-.homegrown{
-    border-bottom: 1px solid #000;
+.homegrown {
+  border-bottom: 1px solid #000;
+  webkit-animation: homegrown ease 0.3s;
+  -webkit-animation: homegrown 0.7s;
+  height: 700px;
+
+  &__background {
+    background-image: url("/wp-content/uploads/homepage/cactus1.png");
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    height: 100%;
+    background-position: 80% 164px;
+  }
+  &__container {
     height: 60vh;
-    &__background{
-        background-image: url("/wp-content/uploads/homepage/cactus1.png");
-        background-repeat:no-repeat; 
-        background-size: 800px 800px;
-        height: 100%;
-        background-position: 420px 76px;
-    }
+  }
+}
+
+@-webkit-keyframes homegrown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate(0px, 60px);
+  }
+
+  22% {
+    opacity: 0.2;
+    -webkit-transform: translate(0px, 80px);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translate(0px, 0px);
+  }
 }

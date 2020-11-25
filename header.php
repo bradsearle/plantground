@@ -67,7 +67,8 @@
 	 * @hooked woocommerce_breadcrumb - 10
 	 */
 	do_action( 'storefront_before_content' );
+
+	do_action( 'woocommerce_before_main_content' );
 	?>
 
 		<?php
-		do_action( 'storefront_content_top' );

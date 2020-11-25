@@ -15,24 +15,52 @@
 .deletea2{
     display:none;
     }
+.site-search {
+     
+    display: none!important;
+    }
+
+    .primary-navigation{
+        display: none!important;
+    }
+
+
+
+
+
+
+
+
+    
+
+
+
     </style>
 
-<?php /* Template Name: Homepage development */ get_header(); ?>
+                <?php /* Template Name: Homepage development */ get_header(); ?>
 
 
 <div class="hp-view__wrap">
 <div class="container">
-
+<div class="homegrown__container">
 <div class="homegrown">
+
 <div class="homegrown__background">
 
+
+
+</div>
 </div>
 
 
 </div>
 
-</div>
 
+
+
+
+
+</div>
 </div>
 
 
