@@ -44,24 +44,34 @@ function storefront_remove_storefront_breadcrumbs() {
           
 // }
  
+
+
+
+
 /* Enqueues the external CSS file */
 add_action( 'wp_enqueue_scripts', 'pg' );
 function pg() {
  
-    wp_register_style( 'pg-css', get_stylesheet_directory_uri().'/assets/css/styles.css' );
+    wp_register_style( 'pg-css', get_stylesheet_directory_uri().'/assets/css/styles.css', 999 );
     wp_enqueue_style( 'pg-css' );
- 
 }
 
 
-
+add_filter( 'body_class','my_body_classes' );
+function my_body_classes( $classes ) {
+ 
+    $classes[] = 'plantground__bas';
+     
+    return $classes;
+     
+}
 
 if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
 	/**
 	 * The primary navigation wrapper
 	 */
 	function storefront_primary_navigation_wrapper() {
-		echo '<div id="deletea"><div class="ht">';
+		echo '<div class="container deletea"><div class="ht">';
 	}
 }
 
@@ -151,3 +161,5 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 		<?php
 	}
 }
+
+

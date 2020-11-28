@@ -1,14 +1,15 @@
 .homegrown {
-  border-bottom: 1px solid #000;
-  webkit-animation: homegrown ease 0.3s;
-  -webkit-animation: homegrown 0.7s;
-  height: 700px;
+//   border-bottom: 1px solid #000;
+//   webkit-animation: homegrown ease 0.3s;
+//   -webkit-animation: homegrown 0.7s;
+  height: 60vh;
 
   &__background {
     background-image: url("/wp-content/uploads/homepage/cactus1.png");
     background-repeat: no-repeat;
-    background-size: 500px 500px;
+    background-size:contain;
     height: 100%;
+   
     background-position: 80% 164px;
   }
   &__container {
@@ -16,7 +17,7 @@
   }
 }
 
-@-webkit-keyframes homegrown {
+@-webkit-keyframes homegrown2 {
   0% {
     opacity: 0;
     -webkit-transform: translate(0px, 60px);
@@ -24,10 +25,110 @@
 
   22% {
     opacity: 0.2;
-    -webkit-transform: translate(0px, 80px);
+    -webkit-transform: translate(0px, 50px);
   }
   100% {
     opacity: 1;
     -webkit-transform: translate(0px, 0px);
   }
 }
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@keyframes showTopText {
+  0% { transform: translate3d(0, 100%, 0); }
+  40%, 60% { transform: translate3d(0, 50%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+@keyframes showBottomText {
+  0% { transform: translate3d(0, -100%, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+ 
+  .heading {
+    font-size: 7vw;
+    white-space:nowrap;
+    color: #000;
+    
+  }
+
+
+
+  @media screen and (min-width: 1200px) {
+    .heading {
+        font-size: 88px;
+        white-space:nowrap;
+        
+      }
+  }
+  .liner{
+    border-bottom: 1px solid #999;
+  }
+
+  
+  .animatable {
+    position: relative;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1s 1 reveal forwards;
+  }
+  
+  .animatable::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: inherit;
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1.75s 1 hideBlack forwards;
+  }
+
+
+  .animatable2 {
+ 
+
+    position: relative;
+    clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 2s 1 reveal forwards;
+  }
+  
+  .animatable2::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    padding: inherit;
+    animation: .75s cubic-bezier(1,-0.01,.12,.8) 1.75s 1 hideBlack forwards;
+  }
+  
+  @keyframes reveal {
+    from { clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%); }
+    to { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+  }
+  
+  @keyframes hideBlack {
+    from { clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    to { clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%); }
+  }
