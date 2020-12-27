@@ -36,11 +36,11 @@
 
   <?php endif; ?>
 
-<div class="hp-img">
+<!-- <div class="hp-img">
   <img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/cactus-one.png" />
  
  
 
-</div>
+</div> -->
 
 </section>

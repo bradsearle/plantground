@@ -15,7 +15,8 @@
 @import "base/fonts", "base/typography", "base/helpers";
 
 // 4. Layout-related sections
-@import "layout/header", "layout/footer";
+@import "layout/header";
+@import "layout/footer";
 
 // 5. Components
 @import "components/button";
@@ -158,18 +159,7 @@ background-color: #fff;
   padding-top: calc(0.5em - 1px);
 }
 
-@media (min-width: 776px) {
-  .woocommerce-cart .woocommerce {
-    display: flex;
-  }
-  .woocommerce-cart .woocommerce-cart-form {
-    flex: 60%;
-    margin-right: 30px;
-  }
-  .woocommerce-cart .cart-collaterals {
-    flex: 40%;
-  }
-}
+
 .woocommerce .cart-collaterals .cart_totals,
 .woocommerce-page .cart-collaterals .cart_totals {
   width: 100%;
@@ -214,12 +204,18 @@ background-color: #fff;
 }
 
 .woocommerce.columns-3 ul.products li.product {
-  width: 32.8%;
+  width: 33.3%;
+  border: 1px solid #fff;
+  text-align: left;
+}
+ul.products li.product .woocommerce-LoopProduct-link, ul.products .wc-block-grid__product .woocommerce-LoopProduct-link, .wc-block-grid__products li.product .woocommerce-LoopProduct-link, .wc-block-grid__products .wc-block-grid__product .woocommerce-LoopProduct-link {
+
+  width: 100%;
 }
 
 .woocommerce ul.products li.product,
 .woocommerce-page ul.products li.product {
-  margin: 1px 1px 1px 1px;
+  margin:0px
 }
 
 .woocommerce ul.products.columns-3 li.product,
@@ -228,7 +224,7 @@ background-color: #fff;
 }
 
 .woocommerce ul.products li.product a img {
-  width: 90%;
+  width: 100%;
   height: auto;
   display: block;
   margin: 20px auto 20px auto;
@@ -249,4 +245,48 @@ a:focus,
     width: 24.8%!important;
 margin-right: 1px!important;
 }
+}
+
+
+
+@media (min-width: 776px) {
+  .woocommerce-cart .woocommerce {
+    display: flex;
+  }
+  .woocommerce-cart .woocommerce-cart-form {
+    flex: 60%;
+    margin-right: 30px;
+  }
+  .woocommerce-cart .cart-collaterals {
+    flex: 40%;
+  }
+
+  
+}
+
+@media (max-width: 776px) {
+
+  .woocommerce.columns-3 ul.products li.product {
+    width: 49%;
+    display: inline-flex;
+  }
+}
+
+
+@media (max-width: 430px) {
+
+  .woocommerce.columns-3 ul.products li.product {
+    width: 48.5%;
+    display: inline-flex;
+
+  }
+}
+
+@media (max-width: 298px) {
+
+  .woocommerce.columns-3 ul.products li.product {
+    width: 100%;
+    display: inline-flex;
+
+  }
 }

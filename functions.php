@@ -14,8 +14,6 @@
 /**
  * Dequeue the Storefront Parent theme core CSS
  */
-
-
  
 function sf_child_theme_dequeue_style() {
     wp_dequeue_style( 'storefront-style' );
@@ -23,6 +21,7 @@ function sf_child_theme_dequeue_style() {
 }
 
 add_action( 'init', 'storefront_remove_storefront_breadcrumbs' );
+remove_action( 'storefront_header', 'storefront_primary_navigation', 50 );
 
 function storefront_remove_storefront_breadcrumbs() {
    remove_action( 'storefront_before_content', 'woocommerce_breadcrumb', 10 );
@@ -31,7 +30,6 @@ function storefront_remove_storefront_breadcrumbs() {
 /**
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
-
 
 
 
@@ -47,10 +45,9 @@ function storefront_remove_storefront_breadcrumbs() {
 
 
 
-
 /* Enqueues the external CSS file */
-add_action( 'wp_enqueue_scripts', 'pg' );
-function pg() {
+add_action( 'wp_enqueue_scripts', 'plantgroundstyles' );
+function plantgroundstyles() {
  
     wp_register_style( 'pg-css', get_stylesheet_directory_uri().'/assets/css/styles.css', 999 );
     wp_enqueue_style( 'pg-css' );
@@ -66,14 +63,6 @@ function my_body_classes( $classes ) {
      
 }
 
-if ( ! function_exists( 'storefront_primary_navigation_wrapper' ) ) {
-	/**
-	 * The primary navigation wrapper
-	 */
-	function storefront_primary_navigation_wrapper() {
-		echo '<div class="container deletea"><div class="ht">';
-	}
-}
 
 
 function remove_default_hooks() {
@@ -132,8 +121,8 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 	function storefront_primary_navigation() {
 		?>
 		<ul id="site-header-cartd" class="site-header-cart menu">
-			<li class="<?php echo esc_attr( $class ); ?>">
-				<?php storefront_cart_link(); ?>
+			<li class="test">
+				 <?php storefront_cart_link(); ?> 
 			</li>
 			<li>
 				<?php the_widget( 'WC_Widget_Cart', 'title=' ); ?>
