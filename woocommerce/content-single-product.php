@@ -32,6 +32,8 @@ if ( post_password_required() ) {
 }
 ?>
 
+<?php include get_theme_file_path('/includes/head.php'); ?>
+
 <div class="container">
 above product 
 <div id="product-<?php the_ID(); ?>" <?php wc_product_class( '', $product ); ?>>
@@ -92,4 +94,3 @@ above product
 <?php do_action( 'woocommerce_after_single_product' ); ?>
 
 
-huihiuhiuh

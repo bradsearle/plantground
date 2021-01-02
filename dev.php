@@ -2,7 +2,7 @@
 
 
 
-<?php include get_theme_file_path('head.php'); ?>
+<?php include get_theme_file_path('includes/head.php'); ?>
 
 
 

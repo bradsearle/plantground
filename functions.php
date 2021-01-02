@@ -64,6 +64,10 @@ function my_body_classes( $classes ) {
 }
 
 
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+add_action( 'woo_custom_catalog_ordering', 'woocommerce_catalog_ordering', 30 ); 
+
+
 
 function remove_default_hooks() {
 
@@ -150,5 +154,7 @@ if ( ! function_exists( 'storefront_primary_navigation' ) ) {
 		<?php
 	}
 }
+
+
 
 
