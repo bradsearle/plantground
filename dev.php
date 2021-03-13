@@ -37,7 +37,27 @@
 
 
 
-<div class="hp-view__wrap">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="homeplant">
+
 <div class="container">
  
 
@@ -46,27 +66,23 @@
 <div class="test animatablel liner">
 <div class="homegrown__background8">
 
-  <div class="heading animatable">backyard suculents and</div>
   <div class="heading animatable2">cactus for sale</div>
 </div>
 </div>
   
 
 
-
-
-
-
-
-
-
-
-
-
 </div>
+
 </div>
 
 
+
+
+
+
+
+<!-- <div class="heading animatable">backyard suculents and</div> -->
 
 
 <div class="container">
